@@ -1,14 +1,13 @@
 ; Autor reseni: Andrii Klymenko xklyme00
-; Pocet cyklu k serazeni puvodniho retezce:
-; Pocet cyklu razeni sestupne serazeneho retezce:
-; Pocet cyklu razeni vzestupne serazeneho retezce:
-; Pocet cyklu razeni retezce s vasim loginem:
-; Implementovany radici algoritmus:
+; Pocet cyklu k serazeni puvodniho retezce: 2650
+; Pocet cyklu razeni sestupne serazeneho retezce: 2917
+; Pocet cyklu razeni vzestupne serazeneho retezce: 422
+; Pocet cyklu razeni retezce s vasim loginem: 631
+; Implementovany radici algoritmus: Bubble Sort
 ; ------------------------------------------------
 
 ; DATA SEGMENT
                 .data
-; login:          .asciiz "cba"    ; puvodni uvitaci retezec
 ; login:          .asciiz "vitejte-v-inp-2023"    ; puvodni uvitaci retezec
 ; login:          .asciiz "vvttpnjiiee3220---"  ; sestupne serazeny retezec
 ; login:          .asciiz "---0223eeiijnpttvv"  ; vzestupne serazeny retezec
@@ -22,7 +21,6 @@ params_sys5:    .space  8   ; misto pro ulozeni adresy pocatku
 ; CODE SEGMENT
                 .text
 main:
-        ; SEM DOPLNTE VASE RESENI
         
         daddi r20, r0, 0 ; r20 = 0, r20 will contain string length
 loop1:
@@ -33,7 +31,6 @@ loop1:
         j loop1 ; loop again
 
 end1:
-
         beqz r20, end2
         daddi r22, r0, 1
         dsub r20, r20, r22 ; r20--, r20 will contain string length - 1
